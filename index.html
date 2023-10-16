@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FocusTimer 2.0 - Higor Rocha</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon" />
+    <!-- AGREGANDO CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- AGREGAR ICONS -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- SCRIPT DE MÓDULO! defer: Esperar a que cargue la página.-->
+    <script type="module" src="./src/main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="page">
+      <button id="toggle-mode">
+        <span class="sr-only">Ativar dark mode!</span>
+        <i class="ph-bold ph-sun"></i>
+        <i class="ph-bold ph-moon"></i>
+      </button>
+      <section class="timer">
+        <div class="time">
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </div>
+
+        <div class="controls">
+          <button
+            data-action="toggleRunning"
+            id="btn-play"
+            class="ph ph-play-circle"
+          ></button>
+          <button
+            data-action="toggleRunning"
+            id="btn-pause"
+            class="ph ph-pause-circle"
+          ></button>
+          <button
+            data-action="stop"
+            id="btn-stop"
+            class="ph ph-stop-circle"
+          ></button>
+          <button
+            data-action="plusMinutes"
+            id="btn-plus"
+            class="ph ph-plus-circle"
+          ></button>
+          <button
+            data-action="minusMinutes"
+            id="btn-minus"
+            class="ph ph-minus-circle"
+          ></button>
+        </div>
+      </section>
+
+      <section class="sounds">
+        <button
+          data-action="forestMusic"
+          id="btn-forest"
+          class="ph ph-tree"
+        ></button>
+        <button
+          data-action="rainMusic"
+          id="btn-rain"
+          class="ph ph-cloud-snow"
+        ></button>
+
+        <button
+          data-action="coffeeMusic"
+          id="btn-coffee"
+          class="ph ph-storefront"
+        ></button>
+        <button
+          data-action="campfireMusic"
+          id="btn-campfire"
+          class="ph ph-campfire"
+        ></button>
+      </section>
+    </div>
+  </body>
+</html>
